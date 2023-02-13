@@ -31,7 +31,7 @@ pub fn divide(a: i32, b: i32) -> Result<i32, &'static str> {
 
 Developers coming from other languages might call a bunch of functions and methods and wrap them all in a `try`/`catch`. Coming to Rust and having to handle Results will feel unergonomic to some, since Rust hasn o `try`/`catch`-mechanism.
 
-So a typical anti-pattern is either relying on a lot of nested code with `match`es or `if`s:
+So a typical anti-pattern is either relying on a lot of nested code with `match`es or `if`s and "`return`" if you want to short-circuit a function:
 
 ```rust
 fn read_file() -> () {
@@ -51,7 +51,7 @@ fn read_file() -> () {
 }
 ```
 
-Or `unwrap`ping the results everywhere to make the code feel more imperative and terse:
+Or developers might `unwrap` the results everywhere to make the code feel more imperative and terse:
 
 ```rust
 fn read_file() -> () {
