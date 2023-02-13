@@ -17,7 +17,7 @@ The divider-function (under `src/divider.rs`) will `panic!` and crash the progra
 <details><summary>🙈 Spoiler alert! A possible solution</summary>
 
 ```rust
-pub fn divide2(a: i32, b: i32) -> Result<i32, &'static str> {
+pub fn divide(a: i32, b: i32) -> Result<i32, &'static str> {
     if b == 0 {
         return Err("Division by zero not allowed!");
     }
