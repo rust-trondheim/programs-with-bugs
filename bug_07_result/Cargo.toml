@@ -1,5 +1,5 @@
 [package]
-name = "_07_result"
+name = "bug_07_result"
 version = "0.1.0"
 edition = "2021"
 
