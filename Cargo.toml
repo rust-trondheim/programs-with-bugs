@@ -1,0 +1,6 @@
+[workspace]
+
+members = [
+    "bug_07_result/",
+    "bug_08_error_mapping/",
+]
