@@ -66,7 +66,7 @@ As we've learned from the first bug though, returning a Result is preferred. And
 
 A very nice mechanism here, is that the Rust syntax allows us to put `?` at the end of calls which returns `Result`s, which will continue the execution if the `Result` is `Ok`, or return from the `Err` to the calling function if it failed.
 
-The read_file-function (under `src/divider.rs`) will `panic!` and if the file doesn't exist or the reafd failed.. Rewrite the function to instead return a `Result`-type, and use the `?` syntax instead of unwrapping or unecessarily nesting with `match`. Use the tests in the same file as guideance / check.
+The read_file-function (under `src/divider.rs`) will `panic!` and if the file doesn't exist or the read failed. Rewrite the function to instead return a `Result`-type, and use the `?` syntax instead of unwrapping or unecessarily nesting with `match`. Use the tests in the same file as guideance / check.
 
 <details><summary>🙈 Spoiler alert! A possible solution</summary>
 
