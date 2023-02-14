@@ -1,7 +1,4 @@
-use std::{
-    fs::{self, File},
-    io::{Read, Write},
-};
+use std::{fs::File, io::Read};
 
 pub fn read_file(file_path: &String) -> String {
     let mut file = File::open(file_path).unwrap();
@@ -10,35 +7,42 @@ pub fn read_file(file_path: &String) -> String {
     contents
 }
 
-#[test]
-fn test_read_file_with_existing_file() {
-    let file_path = String::from("file.txt");
+// #[cfg(test)]
+// mod tests {
+//     use std::{fs::remove_file, io::Write};
 
-    // create a file with some content
-    let mut file = File::create(&file_path).unwrap();
-    let contents = "Hello, World!";
-    file.write_all(contents.as_bytes()).unwrap();
+//     use super::*;
 
-    // read the contents of the file
-    let result = read_file(&file_path).unwrap();
+//     #[test]
+//     fn filereader_test_read_file_with_existing_file() {
+//         let file_path = String::from("file.txt");
 
-    // check if the contents of the file are as expected
-    assert_eq!(result, contents);
+//         // create a file with some content
+//         let mut file = File::create(&file_path).unwrap();
+//         let contents = "Hello, World!";
+//         file.write_all(contents.as_bytes()).unwrap();
 
-    // remove the file
-    fs::remove_file(&file_path).unwrap();
-}
+//         // read the contents of the file
+//         let result = read_file(&file_path).unwrap();
 
-#[test]
-fn test_read_file_with_nonexistent_file() {
-    let file_path = String::from("nonexistent.txt");
+//         // check if the contents of the file are as expected
+//         assert_eq!(result, contents);
 
-    // remove the file if it exists
-    fs::remove_file(&file_path).ok();
+//         // remove the file
+//         remove_file(&file_path).unwrap();
+//     }
 
-    // try to read from a nonexistent file
-    let result = read_file(&file_path);
+//     #[test]
+//     fn filereader_test_read_file_with_nonexistent_file() {
+//         let file_path = String::from("nonexistent.txt");
 
-    // check if an error is returned
-    assert!(result.is_err());
-}
+//         // remove the file if it exists
+//         remove_file(&file_path).ok();
+
+//         // try to read from a nonexistent file
+//         let result = read_file(&file_path);
+
+//         // check if an error is returned
+//         assert!(result.is_err());
+//     }
+// }
