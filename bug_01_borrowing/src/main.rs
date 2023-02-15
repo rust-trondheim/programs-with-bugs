@@ -18,7 +18,7 @@ fn update_num_events(attendee: Attendee) {
     attendee.num_events += 1;
 }
 
-// Tenkt å løses vha keywords, ikke refakturering ;)
+// Try solving this with adding keywords, not refacturing ;)
 fn main() {
     let attendee = Attendee {
         attendee_id: 1,

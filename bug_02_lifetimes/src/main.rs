@@ -26,7 +26,7 @@ fn return_best_attendee(attendee_one: &Attendee, attendee_two: &Attendee) -> &At
     return attendee_two;
 }
 
-// Løses ved å spesifisere lifetimes på riktig sted :)
+//  Solve by specifying lifetimes in the correct places :)
 fn main() {
     let mut attendee_anders = Attendee {
         attendee_id: 1,
