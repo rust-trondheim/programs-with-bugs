@@ -1,4 +1,4 @@
-# programmer-med-feil
-En samling av programmer med klassiske Rust feil, tabber, vanskeligheter og det som generelt ille er.
+# programs-with.bugs
+This is a collection of programs that have bugs, errors, difficulties, and what generally bad is.
 
-Heldigvis er det håp, for i denne workshopen skal finne veier ut av villnisset sammen.
+Lucky for us there is hope, because at this meetup we will find ways to get out of this mess together.
