@@ -1,0 +1,18 @@
+[package]
+name = "bug_04_iterators"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+[[bin]]
+name = "iterators_01"
+path = "src/iterators_01.rs"
+[[bin]]
+name = "iterators_01_suggestion"
+path = "src/suggestion/iterators_01.rs"
+[[example]]
+name = "iter_next"
+path = "examples/iter_next.rs"
